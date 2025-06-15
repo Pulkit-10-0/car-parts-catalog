@@ -1,38 +1,36 @@
 # Car Parts Catalog Website
 
-Welcome to the **Car Parts Catalog** – a responsive and theme-switchable product display website built using HTML, CSS, and JavaScript. This project is ideal for auto-parts retailers looking to showcase their products online with a clean, modern UI and integrated WhatsApp enquiry system.
+Welcome to the **Car Parts Catalog** – a responsive and theme-switchable product display website built using HTML, CSS, and JavaScript. This project is designed for auto-parts retailers to showcase their inventory online with a modern user interface and an integrated WhatsApp enquiry system.
 
 ---
 
 ## Preview
 
-![Website Screenshot](Library/screenshot.pngg)
-
+![Website Screenshot](Library/Screenshot.png)
 
 ---
 
 ## Features
 
-- ⚙️ Grid layout for product cards with responsive design.
-- 🌙 **Light/Dark Mode toggle** for improved user experience.
-- 📦 Product listing with image, name, description, and price.
-- 💬 Integrated **WhatsApp Enquiry Popup** modal to initiate contact for a specific product.
-- 🎨 Uses CSS variables (`:root`) for easy theme customization.
-- ✅ Smooth modal animation and dynamic product info insertion.
-- 📱 Fully mobile responsive layout using `CSS Grid`.
+- Responsive grid layout for product cards.
+- Light and dark mode toggle for better user experience.
+- Product listing includes image, name, description, and price.
+- Integrated WhatsApp enquiry popup modal for direct communication.
+- CSS variables for easy customization of theme colors.
+- Smooth animations and dynamic content rendering.
+- Mobile-friendly design using CSS Grid and Flexbox.
 
 ---
 
 ## Tech Stack
 
-| Tech        | Description                     |
-|-------------|---------------------------------|
-| HTML5       | Semantic structure              |
-| CSS3        | Styling with CSS Grid & Flexbox |
-| JavaScript  | Theme toggle, modal, and events |
-| GitHub Pages| (Optional) for deployment       |
+| Technology     | Description                                |
+|----------------|--------------------------------------------|
+| HTML5          | Markup for semantic page structure         |
+| CSS3           | Styling using Grid, Flexbox, and variables |
+| JavaScript     | Event handling, DOM manipulation, theming  |
+   
 
 ---
 
-## 📂 Folder Structure
 
