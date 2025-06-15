@@ -1,18 +1,17 @@
-# 🚗 Car Parts Catalog Website
+# Car Parts Catalog Website
 
 Welcome to the **Car Parts Catalog** – a responsive and theme-switchable product display website built using HTML, CSS, and JavaScript. This project is ideal for auto-parts retailers looking to showcase their products online with a clean, modern UI and integrated WhatsApp enquiry system.
 
 ---
 
-## 📸 Preview
+## Preview
 
 ![Website Screenshot](screenshot.png)
 
-> Replace the image above with an actual screenshot from your project once deployed.
 
 ---
 
-## 🛠️ Features
+## Features
 
 - ⚙️ Grid layout for product cards with responsive design.
 - 🌙 **Light/Dark Mode toggle** for improved user experience.
@@ -24,7 +23,7 @@ Welcome to the **Car Parts Catalog** – a responsive and theme-switchable produ
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 | Tech        | Description                     |
 |-------------|---------------------------------|
