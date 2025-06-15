@@ -1,0 +1,248 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Car Parts Catalog</title>
+      <style>
+        :root {
+          --bg-color: #f8f8f8;
+          --text-color: #000;
+          --card-bg: white;
+          --button-bg: #007bff;
+          --button-text: white;
+        }
+
+        body {
+          font-family: sans-serif;
+          margin: 0;
+          padding: 0;
+          background: var(--bg-color);
+          color: var(--text-color);
+          transition: background 0.3s, color 0.3s;
+        }
+
+        h1 {
+          text-align: center;
+          padding: 1rem;
+        }
+
+        #themeToggle {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 5px;
+          background: #333;
+          color: white;
+          cursor: pointer;
+        }
+
+        .catalog {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+
+        .product {
+          background: var(--card-bg);
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          padding: 1rem;
+          transition: background 0.3s;
+        }
+
+        .product img {
+          width: 100%;
+          height: 150px;
+          object-fit: contain;
+          border-radius: 5px;
+        }
+
+        .product h3 {
+          margin: 0.5rem 0 0.2rem;
+        }
+
+        .product p {
+          margin: 0.2rem 0;
+          font-size: 0.9rem;
+        }
+
+        .product button {
+          margin-top: 0.5rem;
+          padding: 0.5rem 1rem;
+          background: var(--button-bg);
+          color: var(--button-text);
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        body.dark {
+          --bg-color: #121212;
+          --text-color: #fff;
+          --card-bg: #1e1e1e;
+          --button-bg: #4a90e2;
+          --button-text: #fff;
+        }
+      </style>
+    </head>
+    <body>
+        <header style="display: flex; align-items: center; padding: 1rem;background: var(--card-bg); box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <img src = "logo.png" alt= "Logo" style="height: 150px; margin-right: 1rem;">
+            <h1 style="margin: 0;">Car Parts Catalog</h1>
+            <button id="themeToggle" style="margin-left:auto; padding:0.5rem 1rem; border:none; border-radius:5px; background:#333; color:white; cursor:pointer;">
+                Toggle Theme
+              </button>
+            </header>
+
+
+      <div class="catalog">
+        <div class="product">
+          <img src="AirFilter.jpg" alt="Air Filter">
+          <h3>Universal Air Filter</h3>
+          <p>₹1,499</p>
+          <p>Fits most hatchbacks and sedans.</p>
+          <button>Enquire</button>
+        </div>
+        <div class="product">
+          <img src="suspension.jpg" alt="Suspension Kit">
+          <h3>Ironman Form Cell Pro Suspension Kit</h3>
+          <p>₹3,15,000</p>
+          <p>Compatible with select models. Inquire for more.</p>
+          <button>Enquire</button>
+        </div>
+        <div class="product">
+            <img src="AuxillaryLight.jpg" alt="Auxillary Light">
+            <h3>Auxillary Light</h3>
+            <p>₹6,000</p>
+            <p>Fits most hatchbacks and sedans.</p>
+            <button>Enquire</button>
+          </div>
+          <div class="product">
+            <img src="vag.jpg" alt="Vag feauture Unlock">
+            <h3>skoda, Volkswagen feature unlock</h3>
+            <p>₹-----</p>
+            <p>Compatible with specific VAG cars.</p>
+            <button>Enquire</button>
+          </div>
+          <div class="product">
+            <img src="Vag paddle shifters.jpg" alt="Paddle shifters VAG">
+            <h3>VW group Paddle Shifters</h3>
+            <p>₹2,499</p>
+            <p>Fits most hatchbacks and sedans.</p>
+            <button>Enquire</button>
+          </div>
+          <div class="product">
+            <img src="profender.jpg" alt="Shocker Kit profender">
+            <h3>Profender Shocker kit </h3>
+            <p>₹3,50,000</p>
+            <p>Compatible with select models. Inquire for more.</p>
+            <button>Enquire</button>
+          </div>
+          <div class="product">
+            <img src="Ford Tmps.jpg" alt="Ford Tmps">
+            <h3>Ford TPMS sensor </h3>
+            <p>₹10,000</p>
+            <p>Fits Ford Endeavour, Ecosport.</p>
+            <button>Enquire</button>
+          </div>
+          <div class="product">
+            <img src="Wireless Android auto adapter.jpg" alt="Wireless adapter">
+            <h3>Motorola Wireless Apple carplay and Android auto adapter </h3>
+            <p>₹5,999</p>
+            <p>Compatible with headunits with wired Apple carplay and Android auto </p>
+            <button>Enquire</button>
+            <div id="enquiryModal" style="
+            display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+            background: rgba(0, 0, 0, 0.5); 
+            align-items: center; justify-content: center;
+            z-index: 1000;
+          ">
+            <div style="
+              background: var(--card-bg); 
+              color: var(--text-color); 
+              padding: 2rem; 
+              border-radius: 10px;
+              box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+              width: 300px;
+              text-align: center;
+              transition: background 0.3s, color 0.3s;
+            ">
+              <button id="closeModal" style="
+                position: absolute; top: 10px; right: 15px;
+                background: transparent;
+                border: none;
+                font-size: 1.5rem;
+                color: var(--text-color);
+                cursor: pointer;
+              ">&times;</button>
+              <h3 id="modalProductName">Product Name</h3>
+              <p id="modalProductPrice">₹0</p>
+              <a id="whatsappLink" href="#" target="_blank" style="
+                display: inline-block;
+                margin-top: 1rem;
+                background: var(--button-bg);
+                color: var(--button-text);
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+                border-radius: 5px;
+              ">Send on WhatsApp</a>
+            </div>
+          </div>
+          
+
+      </div>
+
+      <script>
+        const toggle = document.getElementById("themeToggle");
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+      });
+
+
+      const modal = document.getElementById("enquiryModal");
+      const closeModal = document.getElementById("closeModal");
+      const productNameEl = document.getElementById("modalProductName");
+      const productPriceEl = document.getElementById("modalProductPrice");
+      const whatsappLink = document.getElementById("whatsappLink");
+
+
+      const phoneNumber = "917827488300";
+
+
+      document.querySelectorAll(".product button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const product = button.closest(".product");
+          const name = product.querySelector("h3").textContent;
+          const price = product.querySelector("p").textContent;
+
+          productNameEl.textContent = name;
+          productPriceEl.textContent = price;
+
+
+          const message = `Hello, I am interested in the following product:\n\n${name}\nPrice: ${price}`;
+          const encodedMessage = encodeURIComponent(message);
+          whatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+
+          modal.style.display = "flex";
+        });
+      });
+
+
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+      </script>
+    </body>
+    </html>
