@@ -6,7 +6,7 @@ Welcome to the **Car Parts Catalog** – a responsive and theme-switchable produ
 
 ## Preview
 
-![Website Screenshot](car-parts-catalog
+[Website Screenshot](car-parts-catalog
 /Screenshot.png)
 
 
